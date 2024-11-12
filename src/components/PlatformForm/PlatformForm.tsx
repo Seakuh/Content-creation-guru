@@ -6,7 +6,11 @@ import StyleSelection from './StyleSelection/StyleSelection';
 import TargetAudience from './TargetAudience/TargetAudience';
 import './PlatformForm.css';
 import { platforms } from '../../data';
-import contentGuruLogo from "../../assets/conten-guru-logo.svg";
+import contentGuruLogo from '../../assets/conten-guru-logo.svg';
+
+interface PlatformFormProps {
+  onGenerateContent: (formData: { platform: string; style: string; targetAudience: string; description: string }) => void;
+}
 
 // Helper function to save to Local Storage
 const saveToLocalStorage = (key: string, value: string) => {
@@ -18,10 +22,9 @@ const loadFromLocalStorage = (key: string, defaultValue: string) => {
   return localStorage.getItem(key) || defaultValue;
 };
 
-const PlatformForm: React.FC = () => {
-  // State with Local Storage initialization
+const PlatformForm: React.FC<PlatformFormProps> = ({ onGenerateContent }) => {
   const [selectedPlatform, setSelectedPlatform] = useState<string>(
-    loadFromLocalStorage('selectedPlatform', "instagram")
+    loadFromLocalStorage('selectedPlatform', 'instagram')
   );
   const [description, setDescription] = useState<string>(
     loadFromLocalStorage('description', '')
@@ -37,7 +40,6 @@ const PlatformForm: React.FC = () => {
     ? platforms.find((platform) => platform.id === selectedPlatform)
     : null;
 
-  // Save state changes to Local Storage
   useEffect(() => {
     if (selectedPlatform) saveToLocalStorage('selectedPlatform', selectedPlatform);
     if (description) saveToLocalStorage('description', description);
@@ -45,29 +47,25 @@ const PlatformForm: React.FC = () => {
     if (targetAudience) saveToLocalStorage('targetAudience', targetAudience);
   }, [selectedPlatform, description, selectedStyle, targetAudience]);
 
-  // Handle Platform selection
   const handlePlatformSelect = (platformId: string) => {
     setSelectedPlatform(platformId);
-    setDescription(''); // Reset description on new platform selection
+    setDescription('');
   };
 
-  // Generate content based on selected options
-  const generateContent = () => {
-    if (selectedPlatformData) {
-      const charLimit = selectedPlatformData.descriptionLimit;
-      console.log(
-        `Generating content with limit of ${charLimit} characters, style ${selectedStyle}, and target audience ${targetAudience}
-        Text: ${description}`
-      );
-      // Add your AI/Content generation logic here
-    }
+  const handleSubmit = () => {
+    onGenerateContent({
+      platform: selectedPlatform,
+      style: selectedStyle,
+      targetAudience,
+      description,
+    });
   };
 
   return (
     <div className="platform-form">
       <img className="logo" src={contentGuruLogo} alt="Content Guru Logo" />
       <h1>Wähle eine Plattform aus:</h1>
-      
+
       {/* Platform selection component */}
       <PlatformSelection onSelectPlatform={handlePlatformSelect} />
 
@@ -78,13 +76,10 @@ const PlatformForm: React.FC = () => {
       <TargetAudience selectedAudience={targetAudience} onAudienceChange={setTargetAudience} />
 
       {/* Description input component */}
-      <DescriptionInput
-        description={description}
-        onChangeDescription={setDescription}
-      />
+      <DescriptionInput description={description} onChangeDescription={setDescription} />
 
       {/* Generate content button */}
-      <button onClick={generateContent} className="generate-button">
+      <button onClick={handleSubmit} className="generate-button">
         Content generieren
       </button>
     </div>
