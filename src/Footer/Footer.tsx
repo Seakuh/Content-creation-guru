@@ -4,9 +4,9 @@ import './Footer.css';
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer-container">
-        FOOTER
-    </div>
+    <footer className="footer">
+      <p>🔍 Content Guru – KI-generierte Inhalte können Fehler enthalten. Bitte überprüfe wichtige Informationen sorgfältig.</p>
+    </footer>
   );
 };
 
