@@ -3,7 +3,7 @@ import facebook from "./assets/facebook.jpg"
 import xing from "./assets/xing.png"
 import pinterest from "./assets/pinterest.jpeg"
 import instagram from "./assets/instagram.webp"
-import x from "./assets/x.webp"
+import x from "./assets/X.jpg"
 import linkedin from "./assets/linkedin.webp"
 import tiktok from "./assets/tiktok.webp"
 import reddit from "./assets/reddit.png"
@@ -12,7 +12,6 @@ import quora from "./assets/quora.png"
 
 
 export const platforms: PlatformType[] = [
-    // Vorherige Plattformen
     {
       id: 'instagram',
       name: 'Instagram',
