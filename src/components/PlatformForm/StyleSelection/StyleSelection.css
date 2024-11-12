@@ -34,13 +34,9 @@
     margin-right: 8px;
   }
   
-  /* Hover- und ausgewählter Zustand */
-  .style-option:hover,
-  .style-option input[type='radio']:checked + .style-emoji {
-    border-color: #3DAFAC;
-  }
-  
-  .style-option input[type='radio']:checked + .style-emoji {
-    border-color: #3DAFAC;
+  /* Hervorgehobener Stil für die ausgewählte Option */
+  .style-option.selected {
+    border-color: #3DAFAC; /* Auswahlfarbe */
     font-weight: bold;
   }
+  

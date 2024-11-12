@@ -26,7 +26,10 @@ const StyleSelection: React.FC<StyleSelectionProps> = ({ selectedStyle, onSelect
       <h2>Wähle einen Stil:</h2>
       <div className="style-options">
         {styleOptions.map((style) => (
-          <label key={style.id} className="style-option">
+          <label
+            key={style.id}
+            className={`style-option ${selectedStyle === style.id ? 'selected' : ''}`}
+          >
             <input
               type="radio"
               name="style"
