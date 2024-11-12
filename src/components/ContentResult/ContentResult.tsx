@@ -20,7 +20,6 @@ const ContentResult: React.FC<ContentResultProps> = ({ result }) => {
 
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
-    alert('Text kopiert!');
   };
 
   return (
