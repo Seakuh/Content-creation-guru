@@ -8,7 +8,7 @@ import linkedin from "./assets/linkedin.webp"
 import tiktok from "./assets/tiktok.webp"
 import reddit from "./assets/reddit.png"
 import quora from "./assets/quora.png"
-
+import youtube from "./assets/youtube.webp"
 
 
 export const platforms: PlatformType[] = [
@@ -44,7 +44,6 @@ export const platforms: PlatformType[] = [
       idealHashtagCount: 3,
       videoDurationLimit: 240,
     },
-    // Neue Plattformen
     {
       id: 'linkedin',
       name: 'LinkedIn',
@@ -52,6 +51,14 @@ export const platforms: PlatformType[] = [
       descriptionLimit: 3000,
       idealHashtagCount: 5,
       videoDurationLimit: 600, // 10 Minuten
+    },
+    {
+      id: 'youtube',
+      name: 'YouTube',
+      logoUrl: youtube, // Stellen Sie sicher, dass die Variable 'youtubeLogo' den Pfad zum YouTube-Logo enthält
+      descriptionLimit: 5000, // YouTube erlaubt Beschreibungen mit bis zu 5.000 Zeichen
+      idealHashtagCount: 15, // Es wird empfohlen, bis zu 15 Hashtags zu verwenden
+      videoDurationLimit: 720, // 12 Stunden in Minuten
     },
     {
       id: 'xing',
