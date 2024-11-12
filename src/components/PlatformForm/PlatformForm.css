@@ -11,10 +11,13 @@
 }
 
 .platform-form {
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin: 0; /* Entfernt möglichen Standardabstand */
+
   }
   
   .platform-form h1 {
