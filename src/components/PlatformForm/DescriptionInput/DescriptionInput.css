@@ -1,0 +1,32 @@
+/* src/components/PlatformForm/DescriptionInput/DescriptionInput.css */
+
+.description-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 16px;
+  }
+  
+  .description-textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+  }
+  
+  .description-textarea:focus {
+    border-color: #3DAFAC;
+    outline: none;
+  }
+  
+  .char-count {
+    margin-top: 8px;
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
