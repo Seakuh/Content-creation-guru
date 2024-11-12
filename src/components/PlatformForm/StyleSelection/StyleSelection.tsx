@@ -23,7 +23,6 @@ type StyleSelectionProps = {
 const StyleSelection: React.FC<StyleSelectionProps> = ({ selectedStyle, onSelectStyle }) => {
   return (
     <div className="style-selection">
-      <h2>Wähle einen Stil:</h2>
       <div className="style-options">
         {styleOptions.map((style) => (
           <label

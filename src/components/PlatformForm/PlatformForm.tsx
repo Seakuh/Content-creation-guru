@@ -63,8 +63,6 @@ const PlatformForm: React.FC<PlatformFormProps> = ({ onGenerateContent }) => {
 
   return (
     <div className="platform-form">
-      <img className="logo" src={contentGuruLogo} alt="Content Guru Logo" />
-      <h1>Wähle eine Plattform aus:</h1>
 
       {/* Platform selection component */}
       <PlatformSelection onSelectPlatform={handlePlatformSelect} />
