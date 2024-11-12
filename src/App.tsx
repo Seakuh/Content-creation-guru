@@ -1,11 +1,15 @@
-// src/App.tsx
+// src/components/App.tsx
 import React from 'react';
-import PlatformForm from './components/PlatformForm/PlatformForm';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
+import MainContent from './MainContent';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <PlatformForm />
+      <Header />
+      <MainContent />
+      <Footer/>
     </div>
   );
 };
