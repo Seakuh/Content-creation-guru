@@ -6,7 +6,6 @@ import StyleSelection from './StyleSelection/StyleSelection';
 import TargetAudience from './TargetAudience/TargetAudience';
 import './PlatformForm.css';
 import { platforms } from '../../data';
-import contentGuruLogo from '../../assets/conten-guru-logo.svg';
 
 interface PlatformFormProps {
   onGenerateContent: (formData: { platform: string; style: string; targetAudience: string; description: string }) => void;

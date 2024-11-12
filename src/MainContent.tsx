@@ -4,6 +4,7 @@ import { generateContent } from './service';
 import Loading from './components/Loading/Loading';
 import ContentResult from './components/ContentResult/ContentResult';
 import PlatformForm from './components/PlatformForm/PlatformForm';
+import "./MainContent.css"
 
 const MainContent: React.FC = () => {
   const [result, setResult] = useState(null);
@@ -23,7 +24,7 @@ const MainContent: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='mainContentContainer'>
       <PlatformForm onGenerateContent={handleGenerateContent} />
       {loading && <Loading />}
       {result && <ContentResult result={result} />}

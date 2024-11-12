@@ -24,7 +24,6 @@ type TargetAudienceProps = {
 const TargetAudience: React.FC<TargetAudienceProps> = ({ selectedAudience, onAudienceChange }) => {
   return (
     <div className="target-audience">
-      <h3>Zielgruppe auswählen:</h3>
       <div className="audience-options">
         {targetOptions.map((option) => (
           <label

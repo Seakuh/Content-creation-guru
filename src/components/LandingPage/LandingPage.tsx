@@ -18,6 +18,7 @@ const LandingPage: React.FC = () => {
       <p className="landing-description">
         Ihre Lösung für maßgeschneiderte Inhalte. Erstellen Sie ansprechende Social-Media-Beiträge für jede Plattform.
       </p>
+      
       <button className="landing-button" onClick={handleButtonClick}>
         Zur Anwendung
       </button>
