@@ -1,4 +1,14 @@
 /* src/components/PlatformForm/PlatformForm.css */
+.logo{
+    width: 14rem;
+    transition: transform .2s; /* Animation */
+
+}
+
+.logo:hover{
+    transform: scale(1.1);
+
+}
 
 .platform-form {
     display: flex;

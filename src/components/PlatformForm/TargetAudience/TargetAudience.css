@@ -1,0 +1,43 @@
+/* src/components/PlatformForm/TargetAudience/TargetAudience.css */
+
+.target-audience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .audience-options {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .audience-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    font-size: 1.1rem;
+  }
+  
+  .audience-option input[type='radio'] {
+    display: none;
+  }
+  
+  .audience-option .audience-emoji {
+    font-size: 1.5rem;
+    margin-right: 8px;
+  }
+  
+  /* Hover- und ausgewählter Zustand */
+  .audience-option.selected {
+    border-color: #3DAFAC;
+    font-weight: bold;
+
+  }
+  
