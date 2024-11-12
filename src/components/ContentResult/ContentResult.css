@@ -1,0 +1,16 @@
+.content-result {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .copy-icon {
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
