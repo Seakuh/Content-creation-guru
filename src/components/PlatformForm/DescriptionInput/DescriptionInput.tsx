@@ -17,7 +17,7 @@ const DescriptionInput: React.FC<DescriptionInputProps> = ({ description, onChan
         placeholder="Deine Beschreibung hier..."
         className="description-textarea"
       />
-      <div className="char-count">{description.length} / {charLimit} Zeichen</div>
+      <div className="char-count">{description.length} Zeichen</div>
     </div>
   );
 };
